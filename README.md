@@ -35,8 +35,6 @@ Example Playbook
     - hosts: servers
       roles:
         - { role: sshd,
-              # Wheel defaults to passwordless sudo access to prevent accidental lockouts
-              wheel_sudo_access: "%wheel ALL=(ALL) NOPASSWD: ALL",
               permit_root_login: "no",
               password_authentication: "no",
               challenge_response_authentication: "no",
