@@ -7,6 +7,9 @@ ssh_users:
   - name: jeffwidman
     groups: wheel
     key: https://github.com/jeffwidman.keys
+  - name: kristenwidman
+    groups: wheel
+    key: https://github.com/kristenwidman.keys
 
 sudo_config_file: /etc/sudoers
 # Wheel defaults to passwordless sudo access to prevent accidental lockouts
