@@ -18,13 +18,13 @@
       state: present
       groups: "{{ item.groups }}"
       #password: "{{ item.password }}"
-  with_items: ssh_users
+  with_items: "{{ ssh_users }}"
 
 - name: Add authorized SSH keys for these users
   authorized_key:
     user: "{{ item.name }}"
     key: "{{ item.key }}"
-  with_items: ssh_users
+  with_items: "{{ ssh_users }}"
   register: add_identity_key
   notify: restart sshd
 
